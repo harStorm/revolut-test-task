@@ -1,0 +1,42 @@
+.header {
+    height: 46px;
+    background: #fff;
+    text-align: left;
+    font: 400 26px Arial;
+    position: relative;
+    padding-left: 20px;
+    z-index: 1;
+  
+    &__text {
+        display: inline-block;
+        position: relative;
+        top: 23px;
+    }
+  
+    &__close {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+        top: 23px;
+        margin: 0 53px 0 2px;
+        position: relative;
+        cursor: pointer;
+    
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 23px;
+            left: 50%;
+            top: 50%;
+            background: #000;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
